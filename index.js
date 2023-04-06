@@ -17,12 +17,16 @@ app.use(cors({
 // connect to mongoDB
   mongoose.set('strictQuery', false)
   mongoose.connect(process.env.MDB_CONNECT) 
-  .then(()=>{console.log('Mongodb connected succesfully')});
-console.log("udsgfgd")
+  .then(()=>{console.log('Mongodb connected succesfully')})
+  .catch(()=>{console.log("check your internet conection")});
+
+
+  
+// console.log("udsgfgd")
 
 
 //  set up routes
-// app.use("/", require("./Router/UserRouter"));
+app.use("/", require("./router/userRouter"));
 
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
