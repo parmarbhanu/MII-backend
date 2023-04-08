@@ -27,6 +27,7 @@ app.use(cors({
 
 //  set up routes
 app.use("/", require("./router/userRouter"));
+app.use("/blog", require("./router/blogRouter"));
 
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
