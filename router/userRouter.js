@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require('../models/userModel');
 
 
-router.get("/user", async (req, res) => {
+router.post("/user", async (req, res) => {
   try {
     const { name, email, phone} = req.body;
     console.log(req.body);
