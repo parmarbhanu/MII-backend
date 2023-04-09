@@ -26,7 +26,7 @@ app.use(cors({
 
 
 //  set up routes
-app.use("/", require("./router/userRouter"));
+app.use("/user", require("./router/userRouter"));
 app.use("/blog", require("./router/blogRouter"));
 app.use("/event", require("./router/eventRouter"));
 
