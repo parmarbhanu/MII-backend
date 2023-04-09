@@ -23,20 +23,7 @@ router.get("/user", async (req, res) => {
   }
 });
 
-
-// router.get('/', (req, res)=>{
-//     try {
-//         console.log("yes we are there")
-//         return res.status(201)
-//         .json({message:"connected"})
-//     } catch (error) {
-//        return res.send(404)
-//     }
-    
-// });
-
 // this will give all the user who fill form
-
 router.get("/user",(req, res) => {
     try {
         console.log("searching for user")
@@ -50,3 +37,13 @@ router.get("/user",(req, res) => {
 
 module.exports=router
 
+// router.get('/', (req, res)=>{
+//     try {
+//         console.log("yes we are there")
+//         return res.status(201)
+//         .json({message:"connected"})
+//     } catch (error) {
+//        return res.send(404)
+//     }
+    
+// });
