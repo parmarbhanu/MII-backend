@@ -1,35 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Admin.css"
 import Header from './Pages/Universal/Header/Header'
 import Blog from './Pages/Blog/Blog'
 
 
 function Admin() {
+  const [curentbox, setcurentbox] = useState("blog");
   return (
     <div>
     <Header/>
-<div class="container py-5">
+<div class="container  py-5">
   <div class="row">
     <div class="col-lg-12 p-5">
       <h1> <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</h1>
       <hr />
     </div>
   </div>
-  <div class="row">
-    {/* <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
-      <a class="text-decoration-none" href="#">
-        <div class="card p-3 shadow bg-purple text-center border-0">
-          <div class="card-body">
-            <i class="fa fa-bookmark-o fa-2x" aria-hidden="true"></i>
-            <hr />
-            <p class="card-title lead">Offer's</p>
-          </div>
-        </div>
-      </a>
-    </div> */}
-
+  <div class="row admin-option-box">
+  
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
-      <a class="text-decoration-none" href="#">
+      <a class="text-decoration-none" onClick={()=>{setcurentbox("blog")}}>
         <div class="card p-3 shadow bg-purple text-center border-0">
           <div class="card-body">
             <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
@@ -41,7 +31,7 @@ function Admin() {
     </div>
 
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
-      <a class="text-decoration-none" href="#">
+      <a class="text-decoration-none" onClick={()=>{setcurentbox("event")}}>
         <div class="card p-3 shadow bg-purple text-center border-0">
           <div class="card-body">
             <i class="fa fa-image fa-2x" aria-hidden="true"></i>
@@ -53,7 +43,7 @@ function Admin() {
     </div>
 
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
-      <a class="text-decoration-none" href="#">
+      <a class="text-decoration-none" onClick={()=>{setcurentbox("contact")}}>
         <div class="card p-3 shadow bg-purple text-center border-0">
           <div class="card-body">
             <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
@@ -63,7 +53,7 @@ function Admin() {
         </div>
       </a>
     </div>
-
+{/* 
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
       <a class="text-decoration-none" href="#">
         <div class="card p-3 shadow bg-purple text-center border-0">
@@ -86,7 +76,7 @@ function Admin() {
           </div>
         </div>
       </a>
-    </div>
+    </div> */}
 
   </div>
 </div>
@@ -116,7 +106,12 @@ function Admin() {
     </div>
   </div>
 </div>
-      <Blog/>
+
+<div className='container'>
+{curentbox==="blog"? <Blog/>:<></>}
+{curentbox==="event"?<h1>EVENTS</h1> :<></>}
+{curentbox==="contact"? <h1>Contact Us</h1>:<></>}
+</div>
     </div>
   )
 }

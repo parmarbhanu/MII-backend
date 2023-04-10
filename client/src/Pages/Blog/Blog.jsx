@@ -1,10 +1,11 @@
 import React from 'react'
 import './Blog.css'
+import Singleblog from './Singleblog'
 
 const Blog = () => {
 
   return (
-    <div>
+    <div className='blog-section'>
       <div className="add">
         <div className="add-icon" onClick={()=>{document.getElementById('add_blog_area').style='dislplay:block'}}>
             {/* icon of add */}
@@ -22,31 +23,8 @@ const Blog = () => {
       </div>
       <div className="blogs">
         <p>Blogs</p>
-        <div className="blog-box">
-            <h3 className="title">Title</h3>
-            <p className="blogtxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aspernatur cupiditate sit voluptatem obcaecati porro tempora sed molestias corporis modi optio libero animi.</p>
-            <button className='delete_blog'>Delete</button>
-        </div>
-        <div className="blog-box">
-            <h3 className="title">Title</h3>
-            <p className="blogtxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aspernatur cupiditate sit voluptatem obcaecati porro tempora sed molestias corporis modi optio libero animi.</p>
-            <button className='delete_blog'>Delete</button>
-        </div>
-        <div className="blog-box">
-            <h3 className="title">Title</h3>
-            <p className="blogtxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aspernatur cupiditate sit voluptatem obcaecati porro tempora sed molestias corporis modi optio libero animi.</p>
-            <button className='delete_blog'>Delete</button>
-        </div>
-        <div className="blog-box">
-            <h3 className="title">Title</h3>
-            <p className="blogtxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aspernatur cupiditate sit voluptatem obcaecati porro tempora sed molestias corporis modi optio libero animi.</p>
-            <button className='delete_blog'>Delete</button>
-        </div>
-        <div className="blog-box">
-            <h3 className="title">Title</h3>
-            <p className="blogtxt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aspernatur cupiditate sit voluptatem obcaecati porro tempora sed molestias corporis modi optio libero animi.</p>
-            <button className='delete_blog'>Delete</button>
-        </div>
+        <Singleblog/>
+        <Singleblog/>
       </div>
     </div>
   )

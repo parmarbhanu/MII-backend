@@ -19,9 +19,10 @@ const Header = () => {
         <nav className="nav-bar">
        
           <div className="left-align">
-            <a class="nav-link text-white" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+            {/* <a class="nav-link text-white" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
             <a class="nav-link text-white" href="#"><i class="fa fa-home" aria-hidden="true"></i>Services</a>
-            <a class="nav-link text-white" href="#"><i class="fa fa-home" aria-hidden="true"></i> Contact us</a>
+            <a class="nav-link text-white" href="#"><i class="fa fa-home" aria-hidden="true"></i> Contact us</a> */}
+            <h1 class="nav-link text-white" style={{fontSize:"30px"}}>Admin Panel</h1>
            </div>
             <div class="right-align">
             {/* <a class="nav-link text-white" href="#">Sign in/Log in <i class="fa fa-sign-out" aria-hidden="true"></i></a> */}

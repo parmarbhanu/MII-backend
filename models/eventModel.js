@@ -7,7 +7,8 @@ const event = new mongoose.Schema({
     authername:{type:String,required: true},
     date:{type:String,required: true},
     time:{type:String,require:true},
-    location:{type:String,require:true},
+    sponsors: [ { imgUrl:{ type: String, required: true } } ]    ,
+     location:{type:String,require:true},
     numberofspeaker:{type:String,require:true},
     registrationfee:{type:String,require:true}
      });
