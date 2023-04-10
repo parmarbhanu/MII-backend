@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(cors({
      credentials: true,
    })
 );
+app.use(cookieParser());
 
 
 // connect to mongoDB
@@ -26,10 +28,16 @@ app.use(cors({
 
 
 //  set up routes
-app.use("/", require("./router/adminRouter"));
+app.use("/admin", require("./router/adminRouter"));
 app.use("/blog", require("./router/blogRouter"));
 app.use("/event", require("./router/eventRouter"));
 
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
-const path=require("path");
+
+// const path=require("path");
+// app.use(express.static('client/build'));
+// const path=require("path");
+// app.get('*', (req,res) => {
+//   res.sendFile(path.resolve( 'client', 'build','index.html'));
+// })
