@@ -72,7 +72,11 @@
     border: 2px solid black;
     margin: 20px 0px;
     padding: 20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .blog-section{
    margin: 30px;
 }

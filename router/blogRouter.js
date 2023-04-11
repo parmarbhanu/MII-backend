@@ -4,7 +4,7 @@ const blog=require("../models/blogModel")
 
 
 // add new blog
-router.post("/newblog").post((req, res) => {
+router.post("/newblog", async (req, res) => {
     const { images,description,title,authername,date} = req.body;
     const newblog = new blog({
         images,
@@ -25,12 +25,23 @@ router.post("/newblog").post((req, res) => {
 router.get("/deleteblog/:id", async (req, res) => {
     const blogId= req.params.id;
     try {
-        let oldblog= await Product.findOneAndDelete({ _id:blogId});
+        let oldblog= await blog.findOneAndDelete({ _id:blogId});
         res.status(200).send(oldblog);
     } catch (err) {
       res.status(200).send(err);
     }
   });
+
+  router.get("/allblogs",(req, res) => {
+    try {
+        // console.log("searching for user")
+        blog.find()
+        .then((user) => res.json(user))
+        .catch((err) => res.status(400).json("Error: " + err));
+    } catch (err) {
+      res.json(false);
+    }
+});
 
 module.exports=router
 
