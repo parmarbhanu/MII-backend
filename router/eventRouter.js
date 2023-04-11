@@ -35,6 +35,17 @@ router.get("/deleteevent/:id", async (req, res) => {
     }
   });
 
+  router.get("/allevents",(req, res) => {
+    try {
+        // console.log("searching for user")
+        event.find()
+        .then((user) => res.json(user))
+        .catch((err) => res.status(400).json("Error: " + err));
+    } catch (err) {
+      res.json(false);
+    }
+});
+
 module.exports=router
 
 
