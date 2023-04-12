@@ -12,7 +12,9 @@
 }
 .left-align{
     display: flex;
+    align-items: center;
 }
 .right-align{
     display: flex;
+    align-items: center;
 }

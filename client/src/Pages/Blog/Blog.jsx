@@ -47,20 +47,30 @@
 // export default Blog
 
 
-import React from 'react'
+// import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Add_blog from './Add_blog';
 import './Blog.css'
-import { useState } from 'react'
+// import { useState } from 'react'
+import Singleblog from './Singleblog'
+import axios from "axios"
 
 const Blog = () => {
 const [openform,setopenform]=useState(false);
+const [blogs, setblogs] = useState([]);
+const apicall=async ()=>{
+    await axios.get("/blog/allblogs").then((res) => { setblogs(res.data) });
+  }
+  useEffect(() => {
+    apicall();
+  }, [])
   return (
     <div>
       <div className="blog-component">
         <p>Blogs</p>
         <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform)}}>
             {/* icon of add */}
-            <i class="fa-solid fa-plus"/>
+            <i className="fa-solid fa-plus"/>
         </div>
 
         {openform?<Add_blog/>:<></>}
@@ -151,11 +161,17 @@ const [openform,setopenform]=useState(false);
                 <span className="date">10/4/2023</span>
               </div>
               <div className="btn-section row-3">          
-                <button className='delete-btn'>Delete</button>
+                <i className="fa fa-trash delete-btn" aria-hidden="true"/>
               </div> 
             </div>
           </div>
         </div>
+      </div>
+      <div className="blogs">
+        <p>Blogs</p>
+         {blogs.map((item) => {
+         return <Singleblog id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date}/>
+        })}
       </div>
     </div>
   )

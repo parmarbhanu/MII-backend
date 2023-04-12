@@ -92,8 +92,14 @@ p>i{
 .delete-btn{
     border-radius: 20px;
     padding: 5px 35px;
+    font-size: 20px;
+    cursor: pointer;
 
 }
+.delete-btn:active{
+    font-size: 30px;
+    color: #9C27B0;
+}  
 .img-upload{
     display: flex;
     justify-content: center;

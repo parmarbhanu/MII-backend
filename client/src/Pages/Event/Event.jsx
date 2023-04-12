@@ -7,7 +7,7 @@ const Event = () => {
   return (
     <div>
       <div className="event-component">
-        <p><i class="fa-sharp fa-solid fa-apostrophe"/>Events</p>
+        <p><i className="fa-sharp fa-solid fa-apostrophe"/>Events</p>
         <div className="add-icon" id="add-icon-event" onClick={()=>{setopenform(!openform)}}>
             {/* icon of add */}
             <i class="fa-solid fa-plus"/>

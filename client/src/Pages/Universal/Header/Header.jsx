@@ -26,7 +26,7 @@ const Header = () => {
            </div>
             <div class="right-align">
             {/* <a class="nav-link text-white" href="#">Sign in/Log in <i class="fa fa-sign-out" aria-hidden="true"></i></a> */}
-            <button class="nav-link text-white" onClick={()=>{logout()}}>Log out <i class="fa fa-sign-out" aria-hidden="true"></i></button>
+            <button class="nav-link text-white" onClick={()=>{logout()}}>Log out <i className="fa fa-sign-out" aria-hidden="true"></i></button>
              </div>   
             </nav>
     </div>
