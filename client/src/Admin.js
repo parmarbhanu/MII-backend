@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Admin.css"
 import Header from './Pages/Universal/Header/Header'
 import Blog from './Pages/Blog/Blog'
-
+import Event from './Pages/Event/Event'
 
 function Admin() {
   const [curentbox, setcurentbox] = useState("blog");
@@ -109,7 +109,7 @@ function Admin() {
 
 <div className='container'>
 {curentbox==="blog"? <Blog/>:<></>}
-{curentbox==="event"?<h1>EVENTS</h1> :<></>}
+{curentbox==="event"?<Event/> :<></>}
 {curentbox==="contact"? <h1>Contact Us</h1>:<></>}
 </div>
     </div>

@@ -1,13 +1,14 @@
 .footer{
     background: black;
     height: 3rem;
-    /* justify-content: center;
-    align-items: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .footer-text{
     color: aliceblue;
-    text-align: center;
+    /* text-align: center; */
     /* justify-content: center; */
     font-size: small;
 }
