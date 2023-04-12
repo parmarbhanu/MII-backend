@@ -107,7 +107,7 @@ const apicall=async ()=>{
                 <span className="date">10/4/2023</span>
               </div>
               <div className="btn-section row-3">          
-                <button className='delete-btn'>Delete</button>
+                <i className="fa fa-trash delete-btn" aria-hidden="true"/>
               </div> 
             </div>
           </div>
@@ -125,7 +125,7 @@ const apicall=async ()=>{
                 <span className="date">10/4/2023</span>
               </div>
               <div className="btn-section row-3">          
-                <button className='delete-btn'>Delete</button>
+                <i className="fa fa-trash delete-btn" aria-hidden="true"/>
               </div> 
             </div>
           </div>
@@ -143,7 +143,7 @@ const apicall=async ()=>{
                 <span className="date">10/4/2023</span>
               </div>
               <div className="btn-section row-3">          
-                <button className='delete-btn'>Delete</button>
+                <i className="fa fa-trash delete-btn" aria-hidden="true"/>
               </div> 
             </div>
           </div>
