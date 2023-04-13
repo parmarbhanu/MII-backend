@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
-import './Event.css'
+import React, { useState, useEffect } from 'react'
+import Singleevent from './Singleevent';
 import Add_event from './Add_event';
+import axios from 'axios';
+import './Event.css'
 
 const Event = () => {
   const[openform,setopenform]=useState(false);
+  const [events, setevents] = useState([]);
+const apicall=async ()=>{
+    await axios.get("/event/allevents").then((res) => { setevents(res.data) });
+  }
+  useEffect(() => {
+    apicall();
+  }, [])
   return (
     <div>
       <div className="event-component">
@@ -61,6 +70,12 @@ const Event = () => {
           </div>
         </div>
       </div>
+      </div>
+      <div className="blogs">
+        <p>Events</p>
+         {events.map((item) => {
+         return <Singleevent id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date} time={item.time} location={item.location} numberofspeaker={item.numberofspeaker} registrationfee={item.registrationfee}/>
+        })}
       </div>
     </div>
   )
