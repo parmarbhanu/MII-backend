@@ -73,6 +73,8 @@ router.get("/isauthenticated", (req, res) => {
   }
 });
 
+module.exports=router
+
 // this will give all the user who fill form
 // router.get("/user",(req, res) => {
 //     try {
@@ -85,7 +87,7 @@ router.get("/isauthenticated", (req, res) => {
 //     }
 // });
 
-module.exports=router
+
 
 // router.get('/', (req, res)=>{
 //     try {
