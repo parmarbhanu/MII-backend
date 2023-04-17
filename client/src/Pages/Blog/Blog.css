@@ -69,3 +69,15 @@
     margin-top: 15px;
     text-align: right;
 }
+
+.delete-btn{
+    border-radius: 20px;
+    padding: 5px 35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.delete-btn:active{
+    /* font-size: large; */
+    color: #9C27B0;
+}  

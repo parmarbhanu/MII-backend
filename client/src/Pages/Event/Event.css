@@ -68,10 +68,12 @@ p>i{
 }
 
 .event-box{
+    position: relative;
     width: 20rem;
     border: 2px solid black;
     margin: 20px 30px;
     border-radius: 10px;
+    padding-bottom: 50px;
 }
 
 .event-img>img{
@@ -85,17 +87,6 @@ p>i{
 
 }
 
-.delete-btn{
-    border-radius: 20px;
-    padding: 5px 35px;
-    font-size: 20px;
-    cursor: pointer;
-
-}
-.delete-btn:active{
-    font-size: 30px;
-    color: #9C27B0;
-}  
 .img-upload{
     display: flex;
     justify-content: center;
@@ -121,3 +112,32 @@ p>i{
 .small-box-area input{
     width: 40%;
 }
+
+.event-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.date-time{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.event-delete-btn{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    margin: 10px 0;
+}
+
+.event-delete-btn:hover{
+    cursor: pointer;
+}
+
+.event-delete-btn:active{
+    font-size: large;
+    color: #9C27B0;
+}   

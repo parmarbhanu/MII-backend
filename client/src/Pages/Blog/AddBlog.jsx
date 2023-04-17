@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Add_blog = () => {
+const AddBlog = () => {
   return (
     <div>
        <div className="add-area add_blog_area ">
@@ -23,4 +23,4 @@ const Add_blog = () => {
   )
 }
 
-export default Add_blog
+export default AddBlog
