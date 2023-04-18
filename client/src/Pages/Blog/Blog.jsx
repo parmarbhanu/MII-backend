@@ -49,7 +49,7 @@
 
 // import React from 'react'
 import React, { useEffect, useState } from 'react'
-import Add_blog from './Add_blog';
+import AddBlog from './AddBlog';
 import './Blog.css'
 // import { useState } from 'react'
 import Singleblog from './Singleblog'
@@ -57,6 +57,11 @@ import axios from "axios"
 
 const Blog = () => {
 const [openform,setopenform]=useState(false);
+const [sign,setSign] =useState('plus');
+const signChange = () => {
+  console.log("openform = " +openform+ " sign = " + sign);
+  openform? setSign('plus') : setSign('xmark');
+}
 const [blogs, setblogs] = useState([]);
 const apicall=async ()=>{
     await axios.get("/blog/allblogs").then((res) => { setblogs(res.data) });
@@ -68,12 +73,12 @@ const apicall=async ()=>{
     <div>
       <div className="blog-component">
         <p>Blogs</p>
-        <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform)}}>
+        <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform);signChange()}}>
             {/* icon of add */}
-            <i className="fa-solid fa-plus"/>
+            <i className={`fa-solid fa-${sign}`}/>
         </div>
 
-        {openform?<Add_blog/>:<></>}
+        {openform?<AddBlog />:<></>}
         <div className="blogs">
           <div className="blog-box">
             <div className="blog-img">
