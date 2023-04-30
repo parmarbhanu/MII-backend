@@ -4,7 +4,8 @@ const event=require("../models/eventModel")
 
 
 // add new event
-router.post("/newevent", async(req, res) => {
+router.post("/newevent", async (req, res) => {
+  console.log(req.body);
     const { images,description,title,authername,date,time,location,numberofspeaker,registrationfee} = req.body;
     const newevent = new event({
         images,
