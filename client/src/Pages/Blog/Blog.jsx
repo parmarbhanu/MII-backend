@@ -69,6 +69,7 @@ const apicall=async ()=>{
   useEffect(() => {
     apicall();
   }, [])
+  
   return (
     <div>
       <div className="blog-component">
