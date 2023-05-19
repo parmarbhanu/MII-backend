@@ -30,12 +30,13 @@ const apicall=async ()=>{
         </div>
 
         {openform?<AddBlog />:<></>}
+        <h1>add a Blog</h1>
         <div className="blogs">  
 
         </div>
       </div>
       <div className="blogs">
-        <p>Blogs</p>
+        {/* <p>Blogs</p> */}
          {blogs.map((item) => {
          return <Singleblog id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date}/>
         })}

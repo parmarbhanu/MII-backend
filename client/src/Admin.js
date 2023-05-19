@@ -24,19 +24,19 @@ function Admin() {
           <div class="card-body">
             <i class="fa fa-edit fa-2x" aria-hidden="true"></i>
             <hr />
-            <p class="card-title lead">Blog's</p>
+            <p class="card-title-lead">Blog's</p>
           </div>
         </div>
       </a>
     </div>
 
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 p-2" >
       <a class="text-decoration-none" onClick={()=>{setcurentbox("event")}}>
         <div class="card p-3 shadow bg-purple text-center border-0">
           <div class="card-body">
             <i class="fa fa-image fa-2x" aria-hidden="true"></i>
             <hr />
-            <p class="card-title lead">Events</p>
+            <p class="card-title-lead">Events</p>
           </div>
         </div>
       </a>
@@ -48,7 +48,7 @@ function Admin() {
           <div class="card-body">
             <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
             <hr />
-            <p class="card-title lead">Contact Form </p>
+            <p class="card-title-lead">Contact Form </p>
           </div>
         </div>
       </a>
