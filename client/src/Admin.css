@@ -3,7 +3,7 @@ body {
   }
   
   :root {
-    --primary: #99edc3;
+    --primary: #787575;
     
   }
   
@@ -17,7 +17,7 @@ body {
   
   .bg-purple {
     background-color: var(--primary);
-    color: white;
+    color: rgb(1, 6, 3);
   }
 .admin-option-box{
   display: flex;
