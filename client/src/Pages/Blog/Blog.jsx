@@ -27,16 +27,17 @@ const apicall=async ()=>{
         <p>Blogs</p>
         <div className="add-icon" id='add-icon-blog' onClick={()=>{setopenform(!openform);signChange()}}>
             <i className={`fa-solid fa-${sign}`}/>
-            
+
         </div>
 
         {openform?<AddBlog />:<></>}
+        {/* <h1>add a Blog</h1> */}
         <div className="blogs">  
 
         </div>
       </div>
       <div className="blogs">
-        <p>Blogs</p>
+        {/* <p>Blogs</p> */}
          {blogs.map((item) => {
          return <Singleblog id={item._id} title={item.title} description={item.description} images={item.images} authername={item.authername} date={item.date}/>
         })}
@@ -47,6 +48,12 @@ const apicall=async ()=>{
 
 export default Blog
 
+
+
+
+      
+
+       
 
 
 
