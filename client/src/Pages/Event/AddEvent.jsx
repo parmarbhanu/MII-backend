@@ -1,6 +1,51 @@
 import React from 'react'
-
+import { useState } from 'react'
 const AddEvent = () => {
+
+
+  // const [FormData,setFormData]=useState({
+  //   images:"",
+  //   description:"",
+  //   title:"",
+  //   authername:"",
+  //   date:"",
+  //   time:"",
+  //   location:"",
+  //   numberofspeaker:"",
+  //   registrationfee:"",
+    
+  // });
+  
+  // // const handleChange=(e)=>{
+  // //   let key=e.target.name;
+  // //   let val=e.target.value;
+  // //   // console.log(key);
+  // //   // console.log(val);
+  // //   setFormData({...FormData,[key]:val});
+  // // }
+  
+  // const handleSubmit=(e)=>
+  // {
+  //   setFormData({...FormData});
+     
+  //   e.preventDefault();
+  //   console.log(FormData);
+  //   axios.post(`${API}/event`, FormData)
+  //   .then((res) => {
+  //     console.log(res);
+  //     alert("Message Sent Successfully");
+      
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
+    
+  
+  // }
+  
+
+
+
   return (
     <div>
         <div className="add-area add_event_area" id='add_event_area'>
